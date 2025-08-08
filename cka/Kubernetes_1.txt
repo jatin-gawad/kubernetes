@@ -1,0 +1,127 @@
+Kubernetes:   it is  an opensource container  orchestration management tools
+
+
+
+What are advantages kubernetes  
+
+	1. Centerilzed  management:
+                using the kubernetes we can managed DockerHost/ContainerHost from single machine/site.
+                 now we can  manage container  lifecycle from Kubernetes Server 
+  Ops:
+                1. Create
+                2. Volume 
+               3. Scheduling 
+               4. networking 
+               5. User access 
+	2. Reliability/Self-healing: 
+	                 K8s  monitoring the container state regularly .
+	
+	3. High-availability :   if any container  get crash then it automatically  recover  the container ,
+	
+	4. Scalability :  we can extend  compute resource  on container level on demand . 
+	
+	  1.  manually
+	  2. automatically  
+
+Vertical  
+Horizontal 
+
+	5. RBAC: Role Based access control : 
+
+            1. we can delegate  limited  permission to user 
+
+	6. Rollout and  Rollback 
+
+
+
+
+Kubernetes: 
+
+
+
+K8s Arch  ? 
+
+K8s Cluster 
+
+
+	1. Master Nodes(Control plane): Management Nodes
+
+OS : Linux 
+
+Pod=Container 
+
+              1. kube-apiserver 
+ 
+                                              1. command listener
+                                              2. authentication and  authorization
+                                              3. communication  channel . 
+         User --Login--commands-- APIservers (Validate)--- Further  initiate .  
+
+             2.  etcd :   it is the database of  APIserver .  It container  all  information about the Clusters 
+                                 
+                                   key: value information :  yaml based 
+
+                            
+
+             3.  kube-scheduler :  pod placement  across the Nodes. 
+
+                                     1. default 
+                                     2. Custom 
+   
+             4. kube-controllers :   it monitor  pod state /Node   state . 
+ 
+   
+
+Pod Create.(write )
+
+
+Command ---APIServer (validates)---etcd----scheduler---Controller
+
+Get Query 
+Command--get pod ---API(validatation)---etcd 
+
+
+
+
+
+CNCF
+
+
+	2. Worker Nodes(Data Plane):    Application Nodes
+
+
+                      1.  Container Runtime:  (containerd/cri-o)
+              
+                      2.  kubelet:   this  is agent  of  APIserver which take the instruction from API and pass to Container runtime. 
+
+                     3. kube-proxy :  
+
+                 
+
+
+Master Nodes:
+
+ 1. api
+  2. etcd
+  3. scheduler
+ 4. controller
+
+Workernode:
+      1. cri-o
+      2.  kubelet
+       3. Kube-proxy 
+
+
+	1. User managed  K8s 
+	2.  Cloud managed  k8s (PAAS mode)
+
+
+AMZAON:  EKS
+GOOGLE: GKE
+Azure: AKS 
+
+
+EXSI1----  Vcenter: Orchestration and  management 
+
+
+
